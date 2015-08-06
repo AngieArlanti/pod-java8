@@ -72,17 +72,17 @@ public class StreamGenerateAndFinalizeTest {
     @Test
     public final void int_stream_average() {
         final IntStream numbers = IntStream.of(4, 2, 13, 4, 5);
-        assertEquals("should get the average", new Double(5.6), numbers, 0.01);
+        assertEquals("should get the average", new Double(5.6), numbers.average().getAsDouble(), 0.01);
         // summary statistics
         IntSummaryStatistics summaryStatistics = IntStream.of(4, 2, 13, 4, 5).summaryStatistics();
         assertEquals("should get the maxium", 13, summaryStatistics);
         assertEquals("should get the minimum", 2, summaryStatistics);
-        assertEquals(new Double(5.6), summaryStatistics, 0.001);
+        assertEquals(new Double(5.6), summaryStatistics.getAverage(), 0.001);
     }
 
     @Test
     public final void double_stream_sum() {
         final DoubleStream numbers = DoubleStream.of(2.5, 1.2, 3.2);
-        assertEquals("should get the  sum of the values", 6.9, numbers), 0.001);
+        assertEquals("should get the  sum of the values", 6.9, numbers.average().getAsDouble(), 0.001);
     }
 }
