@@ -61,4 +61,10 @@ public class Person {
     public static int compareByAge(Person a, Person b) {
         return a.getBirthday().compareTo(b.getBirthday());
     }
+
+    /** @see java.lang.Object#toString() */
+    @Override
+    public String toString() {
+        return name;
+    }
 }

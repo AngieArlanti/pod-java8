@@ -30,6 +30,7 @@ public class Car {
         this.owner = owner;
         this.type = type;
         this.insuranceId = insuranceId;
+        owner.setCar(this);
     }
 
     /**
@@ -40,6 +41,22 @@ public class Car {
      */
     public Car(Person owner, Type type) {
         this(owner, type, null);
-        owner.setCar(this);
+    }
+
+    public Person getOwner() {
+        return owner;
+    }
+
+    public Type getType() {
+        return type;
+    }
+
+    public String getInsuranceId() {
+        return insuranceId;
+    }
+
+    @Override
+    public String toString() {
+        return type.toString() + " of: " + owner.getName();
     }
 }
