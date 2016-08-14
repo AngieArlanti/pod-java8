@@ -40,7 +40,7 @@ public class LambdaTest {
         // this test is to show how it is done (so we make it pass for you)
         // full syntaxis
         assertTrue(lambdas.weirdEquals((x, y) -> {
-            // many more lines (actually not many, a few)
+            // many more lines (actually not many, a few, with many, call a method :))
                 return x - y - 1;
             }));
 

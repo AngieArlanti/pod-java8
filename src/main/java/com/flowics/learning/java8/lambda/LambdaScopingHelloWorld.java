@@ -6,7 +6,7 @@ package com.flowics.learning.java8.lambda;
 import java.util.concurrent.Callable;
 
 /**
- * Clase the lexical scope of the {@link #r2} lambda
+ * the lexical scope of the {@link #r1} lambda
  * 
  * @author Marcelo
  * @since Jul 29, 2015

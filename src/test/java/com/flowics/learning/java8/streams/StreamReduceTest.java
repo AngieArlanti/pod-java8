@@ -35,7 +35,7 @@ public class StreamReduceTest {
     @Test
     public final void reduce_with_strings() {
         final Stream<String> words = Stream.of("this", "is", "a", "phrase");
-        assertEquals("how can I reduce to this:", "You know? this is a phrase", words.reduce("", (x, y) -> x));
+        assertEquals("How do we make this", "Hey! this is a phrase", words.reduce("", (x, y) -> x));
     }
 
     @Test

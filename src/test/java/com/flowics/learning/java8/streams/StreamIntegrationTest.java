@@ -4,6 +4,7 @@
 package com.flowics.learning.java8.streams;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -21,8 +22,8 @@ import com.flowics.learning.java8.model.Person;
 import com.flowics.learning.java8.model.Person.Sex;
 
 /**
- * Class to play with streams... the idea is to "pipelize" the non java 8 actions of each test
- * 
+ * Class to play with streams... the idea is to "pipelineize" the non java 8 actions of each test
+ *
  * @author Marcelo
  * @since Aug 6, 2015
  */
@@ -46,29 +47,32 @@ public class StreamIntegrationTest {
     }
 
     @Test
-    public final void t() {
-        List<String> names = new ArrayList<>();
-        for (Person p : roster) {
+    public final void should_get_only_males() {
+        final List<String> names = new ArrayList<>();
+        //turn into java 8 stream way
+        for (final Person p : roster) {
             if (p.getGender() == Person.Sex.MALE) {
                 names.add(p.getName());
             }
         }
-        assertEquals(Arrays.asList("jack", "mark"), names);
+        fail("turn the grouping into java 8 and then remove this line! (and of courese fix the assertions)");
+        assertEquals(Arrays.asList("jack"), names);
     }
 
     @Test
-    public final void t2() {
-        Map<Car.Type, Integer> countByType = new HashMap<>();
-        for (Person p : roster) {
+    public final void should_count_by_type() {
+        final Map<Car.Type, Integer> countByType = new HashMap<>();
+        for (final Person p : roster) {
             if (p.getAge() > 18) {
-                Car car = p.getCar();
+                final Car car = p.getCar();
                 if (car != null && car.getInsuranceId() != null) {
-                    Integer count = countByType.getOrDefault(car.getType(), 1);
+                    final Integer count = countByType.getOrDefault(car.getType(), 1);
                     countByType.put(car.getType(), count + 1);
                 }
             }
         }
-        assertEquals(new Integer(2), countByType.get(Type.TOWNCAR));
-        assertEquals(new Integer(3), countByType.get(Type.PICKUP));
+        fail("turn the grouping into java 8 and then remove this line! (and of courese fix the assertions)");
+        assertEquals(new Integer(0), countByType.get(Type.TOWNCAR));
+        assertEquals(new Integer(0), countByType.get(Type.PICKUP));
     }
 }

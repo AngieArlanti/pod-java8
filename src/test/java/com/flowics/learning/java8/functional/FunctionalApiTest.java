@@ -24,7 +24,7 @@ import org.junit.Test;
  * Test to try out the Function API Each test has a definition and some assertions that need to be fixed to
  * understand.
  *
- * Though in the test the funtion variables are assigned lambdas they could be used using the new Idiom but we
+ * Though in the test the function variables are assigned lambdas they could be used using the new Idiom but we
  * don't do it to keep the test shorts and readable:
  *
  * @author Marcelo

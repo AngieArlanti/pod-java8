@@ -53,7 +53,7 @@ public final class TryWithReourcesTest {
 
     /** verifies the amount of calls to close method on the {@link #closeableMock} */
     private void verify_close_calls() throws IOException {
-        // FIXME how many times?
+        // FIXME how many times it was called??
         verify(closeableMock, times(0)).close();
     }
 

@@ -17,7 +17,7 @@ public interface NonFunctionalInterface {
     // Uncomment and the class will not compile
     // String offenderMethodB();
 
-    // aparentyl object methods are not counted as offending
+    // seems that object methods are not counted as offending
     boolean equals(Object obj);
 
     String toString();
