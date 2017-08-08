@@ -8,7 +8,7 @@ target
 .DS_Store
 .springBeans
 *.log
-.DS_Store
+*.DS_Store
 *.pyc
 velocity.log
 .DS_Store
@@ -17,4 +17,12 @@ velocity.log
 build
 .gradle
 .metadata
-
+bin/
+*.iml
+bin/
+config.propierties
+.metadata/
+.metadata
+metadata/
+bower_components/
+node_modules/
